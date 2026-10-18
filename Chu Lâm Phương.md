@@ -24,6 +24,7 @@ Báo cáo chi tiết so sánh quy trình triển khai ứng dụng giữa phươ
 ## 4.2. Sơ Đồ DevOps Workflow Đã Thực Hành
 
 Mô tả quy trình thực tế: Chỉnh sửa mã nguồn $\rightarrow$ Commit $\rightarrow$ Push lên nhánh `gh-pages` $\rightarrow$ Kiểm tra website.
+<img width="1170" height="1696" alt="mermaid-diagram (3)" src="https://github.com/user-attachments/assets/9de1f3ae-4c3d-4168-9312-88f43bd7b712" />
 
 ```mermaid
 flowchart TD

@@ -33,6 +33,47 @@ flowchart TD
     D --> E[5. Mã nguồn cập nhật trên GitHub]
     E --> F[6. GitHub Pages triển khai website]
     F --> G{7. Website hoạt động tốt?}
-    
+    📋 Giải thích chi tiết các bước:
+Code: Chỉnh sửa nội dung website trực tiếp trong file index.html.
+
+Stage: Sử dụng git add để chọn các file thay đổi đưa vào Staging Area.
+
+Commit: Sử dụng git commit để ghi lại phiên bản thay đổi vào Git history.
+
+Push: Sử dụng git push origin gh-pages để gửi commit lên repository trên GitHub.
+
+Deploy: GitHub Pages tự động phát hiện thay đổi và triển khai phiên bản mới từ nhánh gh-pages.
+
+Verify: Mở URL website để kiểm tra giao diện và kiểm tra log nếu xuất hiện lỗi.
+
+4.3. Trả Lời Câu Hỏi Tự Đánh Giá
+❓ Câu 1: DevOps workflow tự động hóa những bước nào mà cách thủ công phải làm bằng tay?
+Trả lời:
+DevOps workflow tự động hóa các khâu Build (xây dựng), Test (kiểm thử) và Deploy (triển khai) thông qua GitHub Actions.
+
+Khi lập trình viên đẩy code lên GitHub, workflow sẽ tự động kích hoạt theo các trigger đã thiết lập.
+
+Nhờ đó, quy trình giảm thiểu tối đa thao tác thủ công, hạn chế rủi ro do con người và đảm bảo tính nhất quán trên các môi trường.
+
+❓ Câu 2: Nếu deploy sai (website bị lỗi), làm sao để quay lại phiên bản cũ?
+Trả lời:
+Phương pháp an toàn nhất là sử dụng lệnh git revert:
+
+Bash
+# Đảo ngược thay đổi của commit gây lỗi
+git revert <commit_hash>
+
+# Push commit đảo ngược lên GitHub để kích hoạt lại pipeline
+git push origin gh-pages
+⚠️ Lưu ý: Tránh dùng git reset --hard trên các nhánh dùng chung (main, gh-pages) vì lệnh này làm thay đổi lịch sử commit và có thể gây mất dữ liệu hoặc xung đột cho các thành viên khác trong team.
+
+❓ Câu 3: GitHub Actions pipeline giúp tiết kiệm bao nhiêu thời gian so với cách thủ công?
+Trả lời:
+
+Triển khai thủ công: Thường mất 15 – 30 phút (cho các bước nén file, FTP/SSH lên server, cấu hình web server, kiểm tra thủ công).
+
+Triển khai tự động (GitHub Actions): Lập trình viên chỉ mất khoảng 10 giây để thực hiện lệnh push, thời gian còn lại do runner tự động thực thi.
+
+Thời gian tiết kiệm ước tính: Khoảng 14 phút 50 giây – 29 phút 50 giây cho mỗi lần deploy.
     G -- Có --> H([Hoàn thành triển khai])
     G -- Không --> I[Kiểm tra cấu hình và log lỗi]

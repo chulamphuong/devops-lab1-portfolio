@@ -1,75 +1,117 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Lab 1 — My Portfolio website_ chu lam phuong</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333;
-        }
-        .container {
-            background: white;
-            border-radius: 16px;
-            padding: 48px;
-            max-width: 600px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            text-align: center;
-        }
-        h1 { color: #667eea; margin-bottom: 8px; font-size: 32px; }
-        h2 { color: #764ba2; margin-bottom: 24px; font-size: 18px; font-weight: normal; }
-        .info { background: #f8f9fa; border-radius: 8px; padding: 20px; margin: 16px 0; text-align: left; }
-        .info p { margin: 8px 0; }
-        .badge {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 14px;
-            margin: 4px;
-        }
-        .footer { margin-top: 24px; font-size: 13px; color: #999; }
-        .status { color: #38a169; font-weight: bold; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio của Chu Lam Phuong - sinh viên Công nghệ thông tin tìm hiểu Software Engineering, DevOps và CI/CD.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Chu Lam Phuong | DevOps Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1> Hello, DevOps! phuong da sua</h1>
-        <h2>Lab 1 — Trải nghiệm CI/CD Pipeline</h2>
-        <h3>Chào mừng bạn đến với trang web cá nhân của Chu Lam Phuong</h3>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Điều hướng chính">
+      <a class="brand" href="index.html"><span class="brand-mark">P</span> PHUONG<span class="brand-dot">.</span></a>
+      <div class="nav-links">
+        <a class="active" href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ</a>
+        <a class="nav-cta" href="https://github.com/chulamphuong" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </nav>
+  </header>
 
-        <div class="info">
-            <p> <strong>Bài học:</strong> DevOps Lab 1 — Tổng quan</p>
-            <p> <strong>Deploy bởi:</strong> GitHub Actions CI/CD</p>
-            <p> <strong>Ngày deploy:</strong> <span id="date"></span></p>
-            <p> <strong>Pipeline status:</strong> <span class="status"> Automated</span></p>
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> DEVOPS LAB 1 · CI/CD PORTFOLIO</div>
+        <p class="intro-label">Xin chào, mình là</p>
+        <h1>Chu Lam <span class="gradient-text">Phuong.</span></h1>
+        <h2>Sinh viên Công nghệ thông tin</h2>
+        <p class="hero-description">
+          Mình đang học cách xây dựng, kiểm thử và triển khai website
+          tự động với Git, GitHub Actions và GitHub Pages. Đây là sản phẩm
+          thực hành DevOps Lab 1 của mình.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="about.html">Khám phá thêm <span>→</span></a>
+          <a class="button button-secondary" href="contact.html">Liên hệ mình</a>
         </div>
+        <div class="quick-stats">
+          <div><strong>HTML5</strong><span>Cấu trúc</span></div>
+          <div><strong>CSS3</strong><span>Giao diện</span></div>
+          <div><strong>CI/CD</strong><span>Tự động hóa</span></div>
+        </div>
+      </div>
 
+      <aside class="profile-card">
+        <div class="card-topline"><span>MY PROFILE</span><span class="live-label">● ONLINE</span></div>
+        <div class="avatar-frame">
+          <img src="IMG_0639.JPG" alt="Ảnh đại diện của Chu Lam Phuong" width="180" height="180">
+        </div>
+        <h2 class="profile-name">Chu Lam Phuong</h2>
+        <p class="profile-role">Software Engineering · DevOps Learner</p>
+        <div class="profile-divider"></div>
+        <div class="profile-detail"><span>⌘</span><span>Git & GitHub Actions</span></div>
+        <div class="profile-detail"><span>◇</span><span>Web Development</span></div>
+        <div class="profile-detail"><span>↗</span><span>Continuous Learning</span></div>
+        <div class="profile-footer">Building skills, one commit at a time.</div>
+      </aside>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <p class="eyebrow">WHAT I'M LEARNING</p>
+        <h2>Công nghệ & kỹ năng</h2>
+        <p>Những công nghệ được sử dụng hoặc tìm hiểu trong bài thực hành này.</p>
+      </div>
+      <div class="tech-grid">
+        <article class="tech-card"><div class="tech-icon orange">5</div><h3>HTML5</h3><p>Xây dựng cấu trúc trang web có ngữ nghĩa.</p><span class="tag">Frontend</span></article>
+        <article class="tech-card"><div class="tech-icon blue">✳</div><h3>CSS3</h3><p>Thiết kế giao diện hiện đại và responsive.</p><span class="tag">Design</span></article>
+        <article class="tech-card"><div class="tech-icon purple">⑂</div><h3>Git & GitHub</h3><p>Quản lý mã nguồn và lịch sử thay đổi.</p><span class="tag">Version Control</span></article>
+        <article class="tech-card"><div class="tech-icon green">↻</div><h3>CI/CD</h3><p>Tự động hóa quy trình kiểm tra chất lượng.</p><span class="tag">DevOps</span></article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="container project-layout">
         <div>
-            <span class="badge">HTML5</span>
-            <span class="badge">CSS3</span>
-            <span class="badge">Git</span>
-            <span class="badge">GitHub Actions</span>
-            <span class="badge">CI/CD</span>
-            <span class="badge">DevOps</span>
+          <p class="eyebrow">FEATURED PROJECT</p>
+          <h2>DevOps Lab 1<br><span class="gradient-text">Portfolio Website</span></h2>
+          <p class="project-description">Một website tĩnh dùng để thực hành Git, quản lý nhánh, tự động kiểm thử bằng GitHub Actions và xuất bản qua GitHub Pages.</p>
+          <a class="text-link" href="https://github.com/chulamphuong/devops-lab1-portfolio" target="_blank" rel="noopener noreferrer">Xem repository trên GitHub ↗</a>
         </div>
+        <div class="pipeline-card">
+          <p class="pipeline-title">WORKFLOW OVERVIEW</p>
+          <div class="pipeline-step"><span class="pipeline-number">01</span><div><strong>Code</strong><small>Chỉnh sửa HTML / CSS</small></div></div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step"><span class="pipeline-number">02</span><div><strong>Push to GitHub</strong><small>Commit và đẩy mã nguồn</small></div></div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step"><span class="pipeline-number">03</span><div><strong>Quality Check</strong><small>GitHub Actions + Lighthouse CI</small></div></div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step"><span class="pipeline-number">04</span><div><strong>GitHub Pages</strong><small>Xuất bản website tĩnh</small></div></div>
+        </div>
+      </div>
+    </section>
 
-        <div class="footer">
-            <p>Deployed automatically via GitHub Actions Pipeline</p>
-            <p> Push code → CI Build → Auto Deploy → Live! </p>
-        </div>
+    <section class="container date-panel">
+      <div><span class="status-dot"></span><strong>Portfolio update</strong><p>Ngày bạn truy cập: <time id="date">Đang tải...</time></p></div>
+      <span class="footer-note">Made for DevOps Lab 1</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Chu Lam Phuong</span>
+      <span>Learn · Build · Automate · Improve</span>
     </div>
+  </footer>
 
-    <script>
-        document.getElementById('date').textContent = new Date().toLocaleDateString('vi-VN');
-    </script>
+  <script>
+    document.getElementById("date").textContent =
+      new Intl.DateTimeFormat("vi-VN", { dateStyle: "long" }).format(new Date());
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

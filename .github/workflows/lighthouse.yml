@@ -29,6 +29,18 @@ jobs:
           npm install -g @lhci/cli
           lhci autorun
 
+      - name: Verify Lighthouse reports
+        if: always()
+        run: |
+          echo "Workspace: $GITHUB_WORKSPACE"
+          if [ -d "$GITHUB_WORKSPACE/.lighthouseci" ]; then
+            echo "Lighthouse report directory found"
+            ls -lah "$GITHUB_WORKSPACE/.lighthouseci"
+          else
+            echo "Lighthouse report directory not found"
+            find "$GITHUB_WORKSPACE" -maxdepth 3 -type d -name ".lighthouseci"
+          fi
+
       - name: Upload Lighthouse reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -36,3 +48,4 @@ jobs:
           name: lighthouse-reports
           path: ${{ github.workspace }}/.lighthouseci/
           if-no-files-found: warn
+          retention-days: 7
